@@ -80,6 +80,23 @@ function changeScene(): void {
             leftCave = new scenes.LeftCave();
             currentScene = leftCave;
             console.log("Starting LEFT_CAVE Scene");
+            // Albert
+            switch (scene) {
+                case config.Scene.LEFT_CAVE:
+                    // show the PLAY scene
+                    stage.removeAllChildren();
+                    leftCave = new scenes.LeftCave();
+                    currentScene = leftCave;
+                    console.log("NEW LEFT NODE");
+                    break;
+                case config.Scene.RIGHT_CAVE:
+                    // show the game OVER scene
+                    stage.removeAllChildren();
+                    rightCave = new scenes.RightCave();
+                    currentScene = rightCave;
+                    console.log("NEW RIGHT NODE");
+                    break;
+            }
             break;
         case config.Scene.RIGHT_CAVE:
             // show the game OVER scene
